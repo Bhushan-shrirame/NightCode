@@ -4,10 +4,6 @@ import { Header } from "./components/header";
 import { StatusBar } from "./components/status-bar";
 import { InputBar } from "./components/input-bar";
 
-
-
-const renderer = await createCliRenderer();
-createRoot(renderer).render(<App />);
 function App() {
   return (
     <box
@@ -25,3 +21,8 @@ function App() {
     </box>
   );
 }
+const renderer = await createCliRenderer({
+  targetFps: 60,
+  exitOnCtrlC:false
+});
+createRoot(renderer).render(<App />);
