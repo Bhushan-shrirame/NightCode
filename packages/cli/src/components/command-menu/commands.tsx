@@ -1,20 +1,36 @@
+import { ThemeDialogContent } from "../dialogs";
 import type { Command } from "./type";
 
 export const COMMANDS: Command[] = [
     {
         name: "new ",
         description: "Start a new conversation",
-        value: "/new"
+        value: "/new",
+        action: (ctx) => {
+            ctx.toast.show({ message: "Starting a new conversation...", variant: "success" });
+        },
     },
     {
         name: "agents ",
         description: "Switch agent",
-        value: "/agents"
+        value: "/agents",
+        action: (ctx) => {
+            ctx.dialog.open({
+                title: "Select Agent",
+                children: <text>Agent selection comming soon... </text>,
+            })
+        },
     },
     {
         name: "models ",
         description: "Select AI model for generation",
-        value: "/models"
+        value: "/models",
+        action: (ctx) => {
+            ctx.dialog.open({
+                title: "Select Model",
+                children: <text>Model selection comming soon... </text>,
+            })
+        },
     },
     {
         name: "sessions ",
@@ -24,7 +40,13 @@ export const COMMANDS: Command[] = [
     {
         name: "theme ",
         description: "Switch UI theme",
-        value: "/themes"
+        value: "/themes",
+        action: (ctx) => {
+            ctx.dialog.open({
+                title: "Select Theme",
+                children: <ThemeDialogContent/>,
+            })
+        },
     },
     {
         name: "login ",
