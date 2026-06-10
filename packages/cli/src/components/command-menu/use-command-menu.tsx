@@ -2,7 +2,7 @@ import { useRef, useState, useMemo, type RefObject, useCallback } from "react";
 import type { ScrollBoxRenderable } from "@opentui/core";
 import { useKeyboard } from "@opentui/react";
 import { getFilterCommands } from "./filter-commands";
-import type { Command } from "./type";
+import type { Command } from "./types";
 import { useKeyboardLayer } from "../../providers/keyboard-layer";
 
 type UseCommandMenuReturn = {
