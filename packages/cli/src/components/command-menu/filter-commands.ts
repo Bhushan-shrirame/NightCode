@@ -1,4 +1,4 @@
-import type {Command} from "./type";
+import type {Command} from "./types";
 import { COMMANDS } from "./commands";
 
 export function getFilterCommands(query : string): Command[] {
