@@ -6,6 +6,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "ai": "^6.0.201",
     "zod": "^4.4.3"
   }
 }
